@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Python</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row" style="margin:auto 20px">
+                <div><h1 style="font-family: Courier New; font-size: 24px; font-weight: bold; color: #666666">Input your python program:</h1></div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-7 col-xs-7">
+                    <div class="form-group">
+                        <textarea id="code" class="form-control" style="font-family: Courier New; font-size: 16px; font-weight: bold; line-height: 18px; weight: 100%; height: 500px" spellcheck="false"></textarea>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-5 col-xs-5">
+                        <div class="form-inline">
+                            <input type="file" id="myfile" class="form-control form-inline" onchange="change()">
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                        <div class="form-inline">
+                            <button type="submit" class="btn btn-default" onclick="codeSubmit()">Submit</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-5">
+                    <div class="form-group">
+                        <textarea id="result" class="form-control" style="font-family: Courier New; font-size: 16px; font-weight: bold; line-height: 18px; background-color: #EEEEEE; weight: 100%; height: 500px" disabled="disabled" readonly="readonly"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"> </script>
+        <script src="js/lexer.js"> </script>
+        <script src="js/parser.js"> </script>
+        <script src="js/token.js"> </script>
+        <script src="js/exc.js"> </script>
+        <script src="js/func.js"> </script>
+        <script src="./js/jquery-1.12.0.min.js"></script>
+        <script src="./js/auto-line-number.js"></script>
+        <script>
+            $("#code").setTextareaCount({
+                width: "30px",
+                bgColor: "#AAAAAA",
+                color: "#FFFFFF",
+                display: "inline-block"
+            });
+        </script>
+    </body>
+</html>
